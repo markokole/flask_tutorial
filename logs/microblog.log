@@ -1,0 +1,40 @@
+2018-07-06 19:14:25,557 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-06 19:16:00,479 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-06 19:16:04,845 ERROR: Exception on /edit_profile [POST] [in /home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/ubuntu/flask_tutorial/app/routes.py", line 94, in edit_profile
+    form = EditProfileForm() #(current_user.username)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/wtforms/form.py", line 212, in __call__
+    return type.__call__(cls, *args, **kwargs)
+TypeError: __init__() missing 1 required positional argument: 'original_username'
+2018-07-06 19:16:36,126 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:02:53,498 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:03:16,242 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:36:49,440 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:40:19,249 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:42:29,931 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:42:53,366 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:43:37,765 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:45:09,645 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:46:10,046 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:46:57,696 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 21:47:27,362 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-07 22:06:35,039 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-08 08:40:19,115 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-08 09:10:56,727 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-08 09:11:19,067 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-08 09:16:29,784 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
