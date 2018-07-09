@@ -1,1 +1,2 @@
 export_FLASK_APP.sh
+*.pyc

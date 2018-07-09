@@ -38,3 +38,58 @@ TypeError: __init__() missing 1 required positional argument: 'original_username
 2018-07-08 09:10:56,727 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
 2018-07-08 09:11:19,067 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
 2018-07-08 09:16:29,784 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:54]
+2018-07-09 10:36:56,572 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:57]
+2018-07-09 10:38:25,829 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:57]
+2018-07-09 10:43:07,552 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:57]
+2018-07-09 10:43:29,666 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:57]
+2018-07-09 11:37:11,502 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:57]
+2018-07-09 11:38:34,752 ERROR: Exception on /reset_password_request [POST] [in /home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/flask_tutorial/app/routes.py", line 177, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/ubuntu/flask_tutorial/app/email.py", line 13, in send_password_reset_email
+    sender=app.config['ADMINS'][0],
+NameError: name 'app' is not defined
+2018-07-09 11:40:21,061 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:57]
+2018-07-09 11:40:32,593 ERROR: Exception on /reset_password_request [POST] [in /home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/flask_tutorial/app/routes.py", line 177, in reset_password_request
+    send_password_reset_email(user)
+  File "/home/ubuntu/flask_tutorial/app/email.py", line 21, in send_password_reset_email
+    user=user, token=token))
+  File "/home/ubuntu/flask_tutorial/app/email.py", line 10, in send_email
+    mail.send(msg)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask_mail.py", line 492, in send
+    message.send(connection)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask_mail.py", line 427, in send
+    connection.send(self)
+  File "/home/ubuntu/.local/lib/python3.5/site-packages/flask_mail.py", line 192, in send
+    message.rcpt_options)
+  File "/usr/lib/python3.5/smtplib.py", line 862, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (550, b'Request failed; Mailbox unavailable', 'm')
+2018-07-09 11:41:45,464 INFO: Microblog startup [in /home/ubuntu/flask_tutorial/app/__init__.py:57]

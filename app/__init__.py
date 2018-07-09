@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from logging.handlers import SMTPHandler, RotatingFileHandler
+from flask_mail import Mail
 
 
 # application object as an instance of class Flask
@@ -19,6 +20,8 @@ login.login_view = 'login' # Flask-Login needs to know what is the view function
 
 db = SQLAlchemy(app) # represents the database
 migrate = Migrate(app, db) # migration engine
+
+mail = Mail(app)
 
 # importing routes - workaround to circular imports
 # models - defines the structure of the database
